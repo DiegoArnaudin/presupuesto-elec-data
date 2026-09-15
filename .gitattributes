@@ -1,0 +1,4 @@
+# Los sha256 de index.json se calculan sobre los bytes del archivo tal cual
+# esta en disco. Si git convirtiera los fines de linea, Pages serviria bytes
+# distintos y la app descartaria la actualizacion entera. No tocar nada.
+* -text
