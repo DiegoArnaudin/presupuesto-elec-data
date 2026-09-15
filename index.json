@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "actualizadoEl": "2026-09-15",
+  "ultimo": "2026-07",
+  "maestroUrl": "https://diegoarnaudin.github.io/presupuesto-elec-data/maestro/items.json",
+  "periodos": [
+    {
+      "periodo": "2026-07",
+      "etiqueta": "Julio 2026",
+      "variacionPct": 1.9,
+      "url": "https://diegoarnaudin.github.io/presupuesto-elec-data/catalogos/2026-07.json",
+      "sha256": "97d09d93ac32fd0e21ec7fd699fc76f58edba76081e1cdff3e7689b4feb91700",
+      "bytes": 27202,
+      "items": 99,
+      "revisiones": 3
+    }
+  ]
+}

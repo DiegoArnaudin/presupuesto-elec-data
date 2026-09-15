@@ -1,0 +1,875 @@
+{
+  "schemaVersion": 1,
+  "periodo": "2026-07",
+  "etiqueta": "Julio 2026",
+  "moneda": "ARS",
+  "variacionPct": 1.9,
+  "fuente": {
+    "url": "https://aaieric.org.ar/costos-mano-de-obra",
+    "tipo": "pdf",
+    "titulo": "AAIERIC - Costos Sugeridos de Mano de Obra - Julio 2026",
+    "obtenidoEl": "2026-09-14"
+  },
+  "notas": [
+    "Precios de mercado según encuesta a instaladores electricistas profesionales.",
+    "Tarifas aplicables a CABA y GBA. Valores en AR$.",
+    "Boca: caja rectangular, cuadrada u octogonal de medidas estándar con extensión máxima de cañería de 5 m entre sí. Para mayor extensión se cotiza 1 boca cada 5 m.",
+    "Valores referenciales para instalaciones de 220/380 V residenciales y pequeños comercios hasta 10 kW.",
+    "Sólo se puntean las cañerías para asegurarlas a la pared. Cerrado de canaletas y revoque final a cargo del gremio correspondiente.",
+    "TODOS los materiales usados DEBEN ser certificados por la norma IRAM/IEC correspondiente.",
+    "Precios para trabajos completos de instalación realizados por el mismo profesional: se debe sumar canalización en losa + mampostería + cableado + conexión + colocación de artefactos."
+  ],
+  "revisiones": [
+    {
+      "codigo": "bandejas.b200-300-metro-h-mayor3",
+      "motivo": "El precio para H > 3 m (16897) es menor que el de H < 3 m (19733) en el PDF de origen. Transcripto tal cual; verificar contra el PDF."
+    },
+    {
+      "codigo": "bandejas.b450-600-metro-h-mayor3",
+      "motivo": "El precio para H > 3 m (23578) es menor que el de H < 3 m (26979) en el PDF de origen. Transcripto tal cual; verificar contra el PDF."
+    },
+    {
+      "codigo": "bandejas.b450-600-accesorio-h-mayor3",
+      "motivo": "El precio para H > 3 m (35234) es menor que el de H < 3 m (39424) en el PDF de origen. Transcripto tal cual; verificar contra el PDF."
+    }
+  ],
+  "secciones": [
+    {
+      "codigo": "obra-general",
+      "nombre": "Obra completa / Refacción / Ampliación",
+      "orden": 1,
+      "items": [
+        {
+          "codigo": "obra-general.visita",
+          "descripcion": "Visita: inspección ocular, evaluación, diagnóstico, asesoramiento y presupuesto",
+          "unidad": "unidad",
+          "precio": 54310,
+          "orden": 1
+        },
+        {
+          "codigo": "obra-general.urgencia-nocturna",
+          "descripcion": "Urgencia: lunes a sábado desde 20:00 hs / domingos y feriados (mínimo)",
+          "unidad": "unidad",
+          "precio": 130203,
+          "orden": 2
+        },
+        {
+          "codigo": "obra-general.boca-completa",
+          "descripcion": "Boca completa (unidad básica de cotización de todo trabajo eléctrico)",
+          "unidad": "boca",
+          "precio": 108431,
+          "orden": 3,
+          "nota": "Canalización, amurado de cañería, cableado reglamentario, conexión de módulos y portalámparas de obra. No incluye instalación de artefactos."
+        },
+        {
+          "codigo": "obra-general.service-instalacion-minimo",
+          "descripcion": "Service / Instalación (mínimo)",
+          "unidad": "unidad",
+          "precio": 108431,
+          "orden": 4
+        },
+        {
+          "codigo": "obra-general.hora-trabajo-minimo",
+          "descripcion": "Hora de trabajo (mínimo)",
+          "unidad": "hora",
+          "precio": 54310,
+          "orden": 5
+        },
+        {
+          "codigo": "obra-general.hora-trabajo-promedio",
+          "descripcion": "Hora de trabajo (promedio)",
+          "unidad": "hora",
+          "precio": 54310,
+          "orden": 6
+        }
+      ]
+    },
+    {
+      "codigo": "canalizacion-losa",
+      "nombre": "Canalización de cañería en losa",
+      "orden": 2,
+      "items": [
+        {
+          "codigo": "canalizacion-losa.losa-cano-metalico",
+          "descripcion": "En losa con caño metálico",
+          "unidad": "boca",
+          "precio": 54894,
+          "orden": 1
+        },
+        {
+          "codigo": "canalizacion-losa.loseta-cano-metalico",
+          "descripcion": "En loseta con caño metálico",
+          "unidad": "boca",
+          "precio": 57637,
+          "orden": 2
+        }
+      ]
+    },
+    {
+      "codigo": "amurado-mamposteria",
+      "nombre": "Amurado de cañería en mampostería",
+      "orden": 3,
+      "items": [
+        {
+          "codigo": "amurado-mamposteria.ladrillo-comun-boca",
+          "descripcion": "Ladrillo común",
+          "unidad": "boca",
+          "precio": 62382,
+          "orden": 1
+        },
+        {
+          "codigo": "amurado-mamposteria.ladrillo-hueco-boca",
+          "descripcion": "Ladrillo hueco",
+          "unidad": "boca",
+          "precio": 60900,
+          "orden": 2
+        },
+        {
+          "codigo": "amurado-mamposteria.ladrillo-comun-metro",
+          "descripcion": "Ladrillo común",
+          "unidad": "metro",
+          "precio": 14909,
+          "orden": 3
+        },
+        {
+          "codigo": "amurado-mamposteria.ladrillo-hueco-metro",
+          "descripcion": "Ladrillo hueco",
+          "unidad": "metro",
+          "precio": 14618,
+          "orden": 4
+        }
+      ]
+    },
+    {
+      "codigo": "amurado-vista",
+      "nombre": "Amurado de cañería a la vista",
+      "orden": 4,
+      "items": [
+        {
+          "codigo": "amurado-vista.metal-pvc-cablecanal",
+          "descripcion": "Metal, PVC, cablecanal (14x30)",
+          "unidad": "boca",
+          "precio": 49861,
+          "orden": 1
+        }
+      ]
+    },
+    {
+      "codigo": "pase-viga-columna",
+      "nombre": "Pase de viga y/o columna",
+      "orden": 5,
+      "items": [
+        {
+          "codigo": "pase-viga-columna.pase",
+          "descripcion": "A razón de 1 (una) boca en viga y/o columna",
+          "unidad": "boca",
+          "precio": 57898,
+          "orden": 1
+        }
+      ]
+    },
+    {
+      "codigo": "cable-subterraneo",
+      "nombre": "Cable subterráneo",
+      "orden": 6,
+      "items": [
+        {
+          "codigo": "cable-subterraneo.tramo-tierra",
+          "descripcion": "Tramo en tierra (se cotiza 1 boca cada 1 m)",
+          "unidad": "boca",
+          "precio": 54260,
+          "orden": 1
+        },
+        {
+          "codigo": "cable-subterraneo.tramo-piso",
+          "descripcion": "Tramo en piso (se cotiza 1 boca cada 1 m)",
+          "unidad": "boca",
+          "precio": 57898,
+          "orden": 2
+        },
+        {
+          "codigo": "cable-subterraneo.caja-paso-tierra",
+          "descripcion": "Adicional por cada caja de paso — en tierra",
+          "unidad": "unidad",
+          "precio": 59587,
+          "orden": 3
+        },
+        {
+          "codigo": "cable-subterraneo.caja-paso-piso",
+          "descripcion": "Adicional por cada caja de paso — en piso",
+          "unidad": "unidad",
+          "precio": 63628,
+          "orden": 4
+        }
+      ]
+    },
+    {
+      "codigo": "cableado",
+      "nombre": "Cableado",
+      "orden": 7,
+      "items": [
+        {
+          "codigo": "cableado.obra-nueva-canalizacion-propia",
+          "descripcion": "Obra nueva – Opción 1: canalización realizada por el profesional",
+          "unidad": "boca",
+          "precio": 26680,
+          "orden": 1
+        },
+        {
+          "codigo": "cableado.obra-nueva-canalizacion-terceros",
+          "descripcion": "Obra nueva – Opción 2: canalización realizada por otro profesional",
+          "unidad": "boca",
+          "precio": 37149,
+          "orden": 2
+        },
+        {
+          "codigo": "cableado.recableado-con-artefactos",
+          "descripcion": "Recableado con artefactos",
+          "unidad": "boca",
+          "precio": 55707,
+          "orden": 3,
+          "nota": "No incluye cables pegados a la cañería ni otro vicio oculto; se cotiza en el momento."
+        },
+        {
+          "codigo": "cableado.recableado-sin-artefactos",
+          "descripcion": "Recableado sin artefactos",
+          "unidad": "boca",
+          "precio": 37149,
+          "orden": 4,
+          "nota": "No incluye cables pegados a la cañería ni otro vicio oculto; se cotiza en el momento."
+        }
+      ]
+    },
+    {
+      "codigo": "conexion-puntos-tomas",
+      "nombre": "Conexión de puntos y tomas",
+      "orden": 8,
+      "items": [
+        {
+          "codigo": "conexion-puntos-tomas.punto-toma-simple",
+          "descripcion": "Punto, toma simple, portalámpara",
+          "unidad": "boca",
+          "precio": 19363,
+          "orden": 1
+        },
+        {
+          "codigo": "conexion-puntos-tomas.toma-doble",
+          "descripcion": "Toma doble",
+          "unidad": "boca",
+          "precio": 24525,
+          "orden": 2
+        },
+        {
+          "codigo": "conexion-puntos-tomas.punto-combinacion",
+          "descripcion": "Punto combinación",
+          "unidad": "boca",
+          "precio": 20842,
+          "orden": 3
+        }
+      ]
+    },
+    {
+      "codigo": "acometida",
+      "nombre": "Acometida (amurado + conexión)",
+      "orden": 9,
+      "items": [
+        {
+          "codigo": "acometida.gabinete-1-medidor-mono",
+          "descripcion": "Gabinete 1 medidor monofásico",
+          "unidad": "unidad",
+          "precio": 227652,
+          "orden": 1
+        },
+        {
+          "codigo": "acometida.gabinete-2-medidores-mono",
+          "descripcion": "Gabinete 2 medidores monofásicos",
+          "unidad": "unidad",
+          "precio": 325340,
+          "orden": 2
+        },
+        {
+          "codigo": "acometida.gabinete-3-medidores-mono",
+          "descripcion": "Gabinete 3 medidores monofásicos",
+          "unidad": "unidad",
+          "precio": 758988,
+          "orden": 3,
+          "nota": "Incluye caja de toma 63 A (EDENOR/EDESUR)."
+        },
+        {
+          "codigo": "acometida.gabinete-4-medidores-mono",
+          "descripcion": "Gabinete 4 medidores monofásicos",
+          "unidad": "unidad",
+          "precio": 867405,
+          "orden": 4,
+          "nota": "Incluye caja de toma 63 A (EDENOR/EDESUR)."
+        },
+        {
+          "codigo": "acometida.pat-servicio",
+          "descripcion": "PAT de servicio (jabalina + caja de inspección)",
+          "unidad": "unidad",
+          "precio": 162585,
+          "orden": 5
+        },
+        {
+          "codigo": "acometida.pilar-completo",
+          "descripcion": "Pilar completo (gabinete, TP, caño y PAT)",
+          "unidad": "unidad",
+          "precio": 894456,
+          "orden": 6
+        },
+        {
+          "codigo": "acometida.cano-acometida",
+          "descripcion": "Caño de acometida (amurado y conexión)",
+          "unidad": "unidad",
+          "precio": 227652,
+          "orden": 7
+        },
+        {
+          "codigo": "acometida.caja-toma-nh00",
+          "descripcion": "Caja de toma (fusilera NH 00)",
+          "unidad": "unidad",
+          "precio": 325340,
+          "orden": 8
+        },
+        {
+          "codigo": "acometida.agregado-gabinete-medidor-tp",
+          "descripcion": "Agregado de un gabinete de medidor + TP",
+          "unidad": "unidad",
+          "precio": 325340,
+          "orden": 9
+        }
+      ]
+    },
+    {
+      "codigo": "bandejas",
+      "nombre": "Bandejas portacables",
+      "orden": 10,
+      "items": [
+        {
+          "codigo": "bandejas.hasta150-metro-h-menor3",
+          "descripcion": "Bandeja hasta 150 mm — por metro lineal (H < 3 m)",
+          "unidad": "metro",
+          "precio": 13163,
+          "orden": 1
+        },
+        {
+          "codigo": "bandejas.hasta150-metro-h-mayor3",
+          "descripcion": "Bandeja hasta 150 mm — por metro lineal (H > 3 m)",
+          "unidad": "metro",
+          "precio": 16465,
+          "orden": 2
+        },
+        {
+          "codigo": "bandejas.hasta150-accesorio-h-menor3",
+          "descripcion": "Bandeja hasta 150 mm — por accesorio (curva plana, unión T) (H < 3 m)",
+          "unidad": "unidad",
+          "precio": 17577,
+          "orden": 3
+        },
+        {
+          "codigo": "bandejas.hasta150-accesorio-h-mayor3",
+          "descripcion": "Bandeja hasta 150 mm — por accesorio (curva plana, unión T) (H > 3 m)",
+          "unidad": "unidad",
+          "precio": 20793,
+          "orden": 4
+        },
+        {
+          "codigo": "bandejas.hasta150-otros-accesorios-h-menor3",
+          "descripcion": "Bandeja hasta 150 mm — otros accesorios (H < 3 m)",
+          "unidad": "unidad",
+          "precio": 8793,
+          "orden": 5
+        },
+        {
+          "codigo": "bandejas.hasta150-otros-accesorios-h-mayor3",
+          "descripcion": "Bandeja hasta 150 mm — otros accesorios (H > 3 m)",
+          "unidad": "unidad",
+          "precio": 25265,
+          "orden": 6
+        },
+        {
+          "codigo": "bandejas.b200-300-metro-h-menor3",
+          "descripcion": "Bandeja 200/300 mm — por metro lineal (H < 3 m)",
+          "unidad": "metro",
+          "precio": 19733,
+          "orden": 7
+        },
+        {
+          "codigo": "bandejas.b200-300-metro-h-mayor3",
+          "descripcion": "Bandeja 200/300 mm — por metro lineal (H > 3 m)",
+          "unidad": "metro",
+          "precio": 16897,
+          "orden": 8
+        },
+        {
+          "codigo": "bandejas.b200-300-accesorio-h-menor3",
+          "descripcion": "Bandeja 200/300 mm — por accesorio (curva plana, unión T) (H < 3 m)",
+          "unidad": "unidad",
+          "precio": 26355,
+          "orden": 9
+        },
+        {
+          "codigo": "bandejas.b200-300-accesorio-h-mayor3",
+          "descripcion": "Bandeja 200/300 mm — por accesorio (curva plana, unión T) (H > 3 m)",
+          "unidad": "unidad",
+          "precio": 25450,
+          "orden": 10
+        },
+        {
+          "codigo": "bandejas.b200-300-otros-accesorios-h-menor3",
+          "descripcion": "Bandeja 200/300 mm — otros accesorios (H < 3 m)",
+          "unidad": "unidad",
+          "precio": 13163,
+          "orden": 11
+        },
+        {
+          "codigo": "bandejas.b200-300-otros-accesorios-h-mayor3",
+          "descripcion": "Bandeja 200/300 mm — otros accesorios (H > 3 m)",
+          "unidad": "unidad",
+          "precio": 33945,
+          "orden": 12
+        },
+        {
+          "codigo": "bandejas.b450-600-metro-h-menor3",
+          "descripcion": "Bandeja 450/600 mm — por metro lineal (H < 3 m)",
+          "unidad": "metro",
+          "precio": 26979,
+          "orden": 13
+        },
+        {
+          "codigo": "bandejas.b450-600-metro-h-mayor3",
+          "descripcion": "Bandeja 450/600 mm — por metro lineal (H > 3 m)",
+          "unidad": "metro",
+          "precio": 23578,
+          "orden": 14
+        },
+        {
+          "codigo": "bandejas.b450-600-accesorio-h-menor3",
+          "descripcion": "Bandeja 450/600 mm — por accesorio (curva plana, unión T) (H < 3 m)",
+          "unidad": "unidad",
+          "precio": 39424,
+          "orden": 15
+        },
+        {
+          "codigo": "bandejas.b450-600-accesorio-h-mayor3",
+          "descripcion": "Bandeja 450/600 mm — por accesorio (curva plana, unión T) (H > 3 m)",
+          "unidad": "unidad",
+          "precio": 35234,
+          "orden": 16
+        },
+        {
+          "codigo": "bandejas.b450-600-otros-accesorios-h-menor3",
+          "descripcion": "Bandeja 450/600 mm — otros accesorios (H < 3 m)",
+          "unidad": "unidad",
+          "precio": 17146,
+          "orden": 17
+        },
+        {
+          "codigo": "bandejas.b450-600-otros-accesorios-h-mayor3",
+          "descripcion": "Bandeja 450/600 mm — otros accesorios (H > 3 m)",
+          "unidad": "unidad",
+          "precio": 47017,
+          "orden": 18
+        }
+      ]
+    },
+    {
+      "codigo": "emergencia",
+      "nombre": "Emergencia / Urgencia",
+      "orden": 11,
+      "items": [
+        {
+          "codigo": "emergencia.atencion-inmediata-habil",
+          "descripcion": "Lunes a sábado de 8 a 20 hs — atención inmediata",
+          "unidad": "unidad",
+          "precio": 108431,
+          "orden": 1
+        }
+      ]
+    },
+    {
+      "codigo": "correccion-fp",
+      "nombre": "Corrección de factor de potencia monofásico",
+      "orden": 12,
+      "items": [
+        {
+          "codigo": "correccion-fp.por-kva",
+          "descripcion": "Por cada kVA",
+          "unidad": "kva",
+          "precio": 140873,
+          "orden": 1
+        }
+      ]
+    },
+    {
+      "codigo": "grupos-electrogenos",
+      "nombre": "Grupos electrógenos monofásicos",
+      "orden": 13,
+      "items": [
+        {
+          "codigo": "grupos-electrogenos.hasta-3-5-kva",
+          "descripcion": "Grupos hasta 3,5 kVA",
+          "unidad": "unidad",
+          "precio": 271122,
+          "orden": 1
+        }
+      ]
+    },
+    {
+      "codigo": "tableros",
+      "nombre": "Tableros",
+      "orden": 14,
+      "items": [
+        {
+          "codigo": "tableros.tp-mono-id-tm-pat",
+          "descripcion": "TP monofásico: tablero principal con 1 ID y 1 TM + PAT",
+          "unidad": "unidad",
+          "precio": 320310,
+          "orden": 1
+        },
+        {
+          "codigo": "tableros.tp-mono-solo-pat",
+          "descripcion": "TP monofásico: solo PAT",
+          "unidad": "unidad",
+          "precio": 162585,
+          "orden": 2
+        },
+        {
+          "codigo": "tableros.tp-tri-id-tm-pat",
+          "descripcion": "TP trifásico: tablero principal con 1 ID y 1 TM + PAT",
+          "unidad": "unidad",
+          "precio": 433760,
+          "orden": 3
+        },
+        {
+          "codigo": "tableros.modulo-bipolar-adicional",
+          "descripcion": "ID, ITM u otro módulo bipolar adicional",
+          "unidad": "unidad",
+          "precio": 78754,
+          "orden": 4
+        },
+        {
+          "codigo": "tableros.id-tetrapolar",
+          "descripcion": "ID tetrapolar",
+          "unidad": "unidad",
+          "precio": 135580,
+          "orden": 5
+        },
+        {
+          "codigo": "tableros.itm-tetrapolar",
+          "descripcion": "ITM tetrapolar",
+          "unidad": "unidad",
+          "precio": 135580,
+          "orden": 6
+        },
+        {
+          "codigo": "tableros.itm-tripolar",
+          "descripcion": "ITM tripolar",
+          "unidad": "unidad",
+          "precio": 114381,
+          "orden": 7
+        },
+        {
+          "codigo": "tableros.seccional-hasta-8-polos",
+          "descripcion": "Tablero seccional hasta 8 polos",
+          "unidad": "unidad",
+          "precio": 227652,
+          "orden": 8
+        },
+        {
+          "codigo": "tableros.seccional-8-36-polos",
+          "descripcion": "Tablero seccional de 8 a 36 polos",
+          "unidad": "unidad",
+          "precio": 910719,
+          "orden": 9
+        },
+        {
+          "codigo": "tableros.seccional-36-54-polos",
+          "descripcion": "Tablero seccional de 36 a 54 polos",
+          "unidad": "unidad",
+          "precio": 1366016,
+          "orden": 10
+        },
+        {
+          "codigo": "tableros.especiales",
+          "descripcion": "Tableros especiales",
+          "unidad": "unidad",
+          "precio": 0,
+          "orden": 11,
+          "nota": "A criterio del instalador según variables.",
+          "cotizable": false
+        }
+      ]
+    },
+    {
+      "codigo": "artefactos",
+      "nombre": "Artefactos de iluminación y otros",
+      "orden": 15,
+      "items": [
+        {
+          "codigo": "artefactos.aplique-simple",
+          "descripcion": "Artefacto aplique simple",
+          "unidad": "unidad",
+          "precio": 29715,
+          "orden": 1
+        },
+        {
+          "codigo": "artefactos.spot-led",
+          "descripcion": "Spot LED por unidad",
+          "unidad": "unidad",
+          "precio": 29715,
+          "orden": 2
+        },
+        {
+          "codigo": "artefactos.colgante-liviano-3-luces",
+          "descripcion": "Artefacto colgante liviano 3 luces 1 efecto",
+          "unidad": "unidad",
+          "precio": 59431,
+          "orden": 3
+        },
+        {
+          "codigo": "artefactos.colgante-liviano-5-luces",
+          "descripcion": "Artefacto colgante liviano 5 luces 1 efecto",
+          "unidad": "unidad",
+          "precio": 78730,
+          "orden": 4
+        },
+        {
+          "codigo": "artefactos.colgante-adicional-efecto",
+          "descripcion": "Artefacto colgante: adicional por efecto",
+          "unidad": "unidad",
+          "precio": 19363,
+          "orden": 5
+        },
+        {
+          "codigo": "artefactos.colgante-pesado-minimo",
+          "descripcion": "Artefacto colgante pesado (mínimo)",
+          "unidad": "unidad",
+          "precio": 103978,
+          "orden": 6
+        },
+        {
+          "codigo": "artefactos.tubo-led-simple-7-36w",
+          "descripcion": "Equipo de tubo LED simple de 7 W a 36 W",
+          "unidad": "unidad",
+          "precio": 59431,
+          "orden": 7
+        },
+        {
+          "codigo": "artefactos.tubo-led-doble-7-36w",
+          "descripcion": "Equipo de tubo LED doble de 7 W a 36 W",
+          "unidad": "unidad",
+          "precio": 73159,
+          "orden": 8
+        },
+        {
+          "codigo": "artefactos.tubo-led-45w",
+          "descripcion": "Equipo de tubo LED 45 W",
+          "unidad": "unidad",
+          "precio": 74319,
+          "orden": 9
+        },
+        {
+          "codigo": "artefactos.tubo-led-doble-45w",
+          "descripcion": "Equipo de tubo LED doble 45 W",
+          "unidad": "unidad",
+          "precio": 92225,
+          "orden": 10
+        },
+        {
+          "codigo": "artefactos.ventilador-techo",
+          "descripcion": "Ventilador de techo",
+          "unidad": "unidad",
+          "precio": 108431,
+          "orden": 11
+        },
+        {
+          "codigo": "artefactos.ventilador-techo-luminaria",
+          "descripcion": "Ventilador de techo con luminaria 1 efecto",
+          "unidad": "unidad",
+          "precio": 135580,
+          "orden": 12
+        }
+      ]
+    },
+    {
+      "codigo": "automatismos",
+      "nombre": "Automatismos",
+      "orden": 16,
+      "items": [
+        {
+          "codigo": "automatismos.contactores",
+          "descripcion": "Contactores",
+          "unidad": "unidad",
+          "precio": 135580,
+          "orden": 1
+        },
+        {
+          "codigo": "automatismos.sensores",
+          "descripcion": "Sensores",
+          "unidad": "unidad",
+          "precio": 119275,
+          "orden": 2,
+          "nota": "Se debe agregar el costo de cableado."
+        }
+      ]
+    },
+    {
+      "codigo": "documentacion",
+      "nombre": "Documentación",
+      "orden": 17,
+      "items": [
+        {
+          "codigo": "documentacion.proyecto-por-m2",
+          "descripcion": "Proyecto eléctrico por m² (incluye lista de materiales)",
+          "unidad": "m2",
+          "precio": 15900,
+          "orden": 1,
+          "nota": "Mínimo 30 m²."
+        },
+        {
+          "codigo": "documentacion.proyecto-minimo",
+          "descripcion": "Proyecto eléctrico — mínimo",
+          "unidad": "global",
+          "precio": 552176,
+          "orden": 2
+        },
+        {
+          "codigo": "documentacion.plano-por-m2",
+          "descripcion": "Plano eléctrico — por m²",
+          "unidad": "m2",
+          "precio": 14680,
+          "orden": 3,
+          "nota": "Mínimo 30 m²."
+        },
+        {
+          "codigo": "documentacion.plano-por-boca",
+          "descripcion": "Plano eléctrico — por boca",
+          "unidad": "boca",
+          "precio": 12702,
+          "orden": 4
+        },
+        {
+          "codigo": "documentacion.plano-tableros",
+          "descripcion": "Plano eléctrico — tableros",
+          "unidad": "unidad",
+          "precio": 32438,
+          "orden": 5
+        },
+        {
+          "codigo": "documentacion.plano-acometida",
+          "descripcion": "Plano eléctrico — acometida",
+          "unidad": "unidad",
+          "precio": 32438,
+          "orden": 6
+        },
+        {
+          "codigo": "documentacion.plano-minimo-30-bocas",
+          "descripcion": "Plano eléctrico — mínimo 30 bocas",
+          "unidad": "global",
+          "precio": 658849,
+          "orden": 7
+        },
+        {
+          "codigo": "documentacion.lista-materiales-minimo-30m2",
+          "descripcion": "Lista de materiales — mínimo para 30 m²",
+          "unidad": "global",
+          "precio": 64986,
+          "orden": 8,
+          "nota": "A consideración del instalador."
+        }
+      ]
+    },
+    {
+      "codigo": "jornales",
+      "nombre": "Jornales (mano de obra contratada por 8 hs)",
+      "orden": 18,
+      "items": [
+        {
+          "codigo": "jornales.oficial-especializado",
+          "descripcion": "Oficial especializado",
+          "unidad": "jornada",
+          "precio": 49514,
+          "orden": 1
+        },
+        {
+          "codigo": "jornales.oficial-electricista",
+          "descripcion": "Oficial electricista",
+          "unidad": "jornada",
+          "precio": 42354,
+          "orden": 2
+        },
+        {
+          "codigo": "jornales.medio-oficial",
+          "descripcion": "Medio oficial electricista",
+          "unidad": "jornada",
+          "precio": 39140,
+          "orden": 3
+        },
+        {
+          "codigo": "jornales.ayudante",
+          "descripcion": "Ayudante",
+          "unidad": "jornada",
+          "precio": 36027,
+          "orden": 4
+        }
+      ]
+    },
+    {
+      "codigo": "certificados",
+      "nombre": "Certificados (referencia CTPBA)",
+      "orden": 19,
+      "items": [
+        {
+          "codigo": "certificados.dci-caie-t1-res-com-mono",
+          "descripcion": "DCI-CAIE T1 residencial / comercial monofásico",
+          "unidad": "unidad",
+          "precio": 405097,
+          "orden": 1
+        },
+        {
+          "codigo": "certificados.dci-caie-t1-res-tri",
+          "descripcion": "DCI-CAIE T1 residencial trifásico",
+          "unidad": "unidad",
+          "precio": 597892,
+          "orden": 2
+        },
+        {
+          "codigo": "certificados.dci-caie-t1-com-tri",
+          "descripcion": "DCI-CAIE T1 comercial trifásico",
+          "unidad": "unidad",
+          "precio": 597892,
+          "orden": 3
+        },
+        {
+          "codigo": "certificados.dci-caie-t2",
+          "descripcion": "DCI-CAIE T2 según potencia instalada",
+          "unidad": "unidad",
+          "precio": 31777,
+          "orden": 4
+        },
+        {
+          "codigo": "certificados.dci-caie-t3",
+          "descripcion": "DCI-CAIE T3 según potencia instalada",
+          "unidad": "unidad",
+          "precio": 31777,
+          "orden": 5
+        },
+        {
+          "codigo": "certificados.protocolo-pat-residencial-comercial",
+          "descripcion": "Protocolo de puesta a tierra (SRT 900/15) residencial / comercial",
+          "unidad": "unidad",
+          "precio": 636071,
+          "orden": 6
+        },
+        {
+          "codigo": "certificados.protocolo-pat-industrial",
+          "descripcion": "Protocolo de puesta a tierra (SRT 900/15) industrial",
+          "unidad": "unidad",
+          "precio": 636071,
+          "orden": 7
+        }
+      ]
+    }
+  ]
+}

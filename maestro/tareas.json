@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "descripcion": "Recetas del modo simple: trabajos en el idioma del oficio que se traducen a ítems del maestro. Sólo referencian códigos de data/maestro/items.json; nunca crean ítems.",
+  "descripcionLineas": "item: un código del maestro, o \"$opcion\" (el de la opción elegida) o \"$canalizacion\" (el de la canalización elegida). cantidad: \"cantidad\" (lo que responde el usuario), \"bocas\" (bocas según metros de caño, 1 cada 5 m), \"canalizacion\" (idem con los metros por boca de la canalización elegida), \"una\" (siempre 1).",
+  "canalizaciones": [
+    {
+      "codigo": "ladrillo-hueco",
+      "etiqueta": "Pared de ladrillo hueco",
+      "item": "amurado-mamposteria.ladrillo-hueco-boca",
+      "metrosPorBoca": 5
+    },
+    {
+      "codigo": "ladrillo-comun",
+      "etiqueta": "Pared de ladrillo común",
+      "item": "amurado-mamposteria.ladrillo-comun-boca",
+      "metrosPorBoca": 5
+    },
+    {
+      "codigo": "a-la-vista",
+      "etiqueta": "A la vista (cablecanal)",
+      "item": "amurado-vista.metal-pvc-cablecanal",
+      "metrosPorBoca": 5
+    },
+    {
+      "codigo": "losa",
+      "etiqueta": "Por losa",
+      "item": "canalizacion-losa.losa-cano-metalico",
+      "metrosPorBoca": 5
+    },
+    {
+      "codigo": "enterrado",
+      "etiqueta": "Enterrado",
+      "item": "cable-subterraneo.tramo-tierra",
+      "metrosPorBoca": 1
+    },
+    {
+      "codigo": "en-piso",
+      "etiqueta": "En piso",
+      "item": "cable-subterraneo.tramo-piso",
+      "metrosPorBoca": 1
+    }
+  ],
+  "tareas": [
+    {
+      "codigo": "cambiar-toma",
+      "titulo": "Cambiar toma o llave",
+      "descripcion": "Reemplazar un toma o una llave que ya existe",
+      "sinonimos": ["enchufe", "tomacorriente", "llave", "tecla", "interruptor", "modulo", "reemplazar"],
+      "preguntaCantidad": "¿Cuántas?",
+      "preguntaOpcion": "¿Qué es?",
+      "opciones": [
+        { "etiqueta": "Toma simple o llave", "item": "conexion-puntos-tomas.punto-toma-simple" },
+        { "etiqueta": "Toma doble", "item": "conexion-puntos-tomas.toma-doble" },
+        { "etiqueta": "Llave de combinación", "item": "conexion-puntos-tomas.punto-combinacion" }
+      ],
+      "lineas": [
+        { "item": "$opcion", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "agregar-toma",
+      "titulo": "Agregar toma nuevo",
+      "descripcion": "Toma nuevo con caño y cable desde la caja más cercana",
+      "sinonimos": ["enchufe", "tomacorriente", "nuevo", "instalar", "sumar"],
+      "preguntaCantidad": "¿Cuántos tomas?",
+      "preguntaOpcion": "¿Simple o doble?",
+      "opciones": [
+        { "etiqueta": "Simple", "item": "conexion-puntos-tomas.punto-toma-simple" },
+        { "etiqueta": "Doble", "item": "conexion-puntos-tomas.toma-doble" }
+      ],
+      "pideCanalizacion": true,
+      "lineas": [
+        { "item": "$canalizacion", "cantidad": "canalizacion" },
+        { "item": "cableado.obra-nueva-canalizacion-propia", "cantidad": "bocas" },
+        { "item": "$opcion", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "agregar-luz",
+      "titulo": "Agregar punto de luz",
+      "descripcion": "Boca de luz nueva con su llave, caño y cable",
+      "sinonimos": ["lampara", "portalampara", "boca", "techo", "centro", "llave", "nuevo"],
+      "preguntaCantidad": "¿Cuántos puntos?",
+      "preguntaOpcion": "¿Cómo se prende?",
+      "opciones": [
+        { "etiqueta": "Con una llave", "item": "conexion-puntos-tomas.punto-toma-simple" },
+        { "etiqueta": "Combinada (dos llaves)", "item": "conexion-puntos-tomas.punto-combinacion" }
+      ],
+      "pideCanalizacion": true,
+      "lineas": [
+        { "item": "$canalizacion", "cantidad": "canalizacion" },
+        { "item": "cableado.obra-nueva-canalizacion-propia", "cantidad": "bocas" },
+        { "item": "$opcion", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "colocar-artefacto",
+      "titulo": "Colocar plafón, aplique o spot",
+      "descripcion": "Instalar o cambiar un artefacto de iluminación",
+      "sinonimos": ["plafon", "aplique", "spot", "led", "lampara", "luminaria", "colgante", "tubo", "cambiar"],
+      "preguntaCantidad": "¿Cuántos?",
+      "preguntaOpcion": "¿Qué artefacto?",
+      "opciones": [
+        { "etiqueta": "Plafón o aplique", "item": "artefactos.aplique-simple" },
+        { "etiqueta": "Spot LED", "item": "artefactos.spot-led" },
+        { "etiqueta": "Colgante liviano (3 luces)", "item": "artefactos.colgante-liviano-3-luces" },
+        { "etiqueta": "Equipo de tubo LED", "item": "artefactos.tubo-led-simple-7-36w" }
+      ],
+      "lineas": [
+        { "item": "$opcion", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "colocar-ventilador",
+      "titulo": "Colocar ventilador de techo",
+      "descripcion": "Instalar un ventilador de techo, con o sin luz",
+      "sinonimos": ["ventilador", "techo", "aspas"],
+      "preguntaCantidad": "¿Cuántos?",
+      "preguntaOpcion": "¿Tiene luz?",
+      "opciones": [
+        { "etiqueta": "Sin luz", "item": "artefactos.ventilador-techo" },
+        { "etiqueta": "Con luz", "item": "artefactos.ventilador-techo-luminaria" }
+      ],
+      "lineas": [
+        { "item": "$opcion", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "agregar-termica",
+      "titulo": "Agregar térmica o disyuntor",
+      "descripcion": "Sumar un módulo bipolar al tablero existente",
+      "sinonimos": ["termica", "disyuntor", "diferencial", "itm", "id", "tablero", "salta", "proteccion"],
+      "preguntaCantidad": "¿Cuántos módulos?",
+      "lineas": [
+        { "item": "tableros.modulo-bipolar-adicional", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "tablero-nuevo",
+      "titulo": "Tablero nuevo",
+      "descripcion": "Armar un tablero principal o seccional",
+      "sinonimos": ["tablero", "caja", "termica", "disyuntor", "principal", "seccional"],
+      "preguntaOpcion": "¿Qué tablero?",
+      "opciones": [
+        { "etiqueta": "Principal monofásico (ID + TM + PAT)", "item": "tableros.tp-mono-id-tm-pat" },
+        { "etiqueta": "Seccional hasta 8 polos", "item": "tableros.seccional-hasta-8-polos" }
+      ],
+      "lineas": [
+        { "item": "$opcion", "cantidad": "una" }
+      ]
+    },
+    {
+      "codigo": "recablear",
+      "titulo": "Recablear",
+      "descripcion": "Cambiar cables viejos por cañerías existentes",
+      "sinonimos": ["cable", "cableado", "cables", "viejo", "quemado"],
+      "preguntaCantidad": "¿Cuántas bocas?",
+      "preguntaOpcion": "¿Con los artefactos puestos?",
+      "opciones": [
+        { "etiqueta": "Con artefactos", "item": "cableado.recableado-con-artefactos" },
+        { "etiqueta": "Sin artefactos", "item": "cableado.recableado-sin-artefactos" }
+      ],
+      "lineas": [
+        { "item": "$opcion", "cantidad": "cantidad" }
+      ]
+    },
+    {
+      "codigo": "puesta-a-tierra",
+      "titulo": "Puesta a tierra",
+      "descripcion": "Jabalina con caja de inspección",
+      "sinonimos": ["jabalina", "tierra", "pat", "descarga"],
+      "lineas": [
+        { "item": "acometida.pat-servicio", "cantidad": "una" }
+      ]
+    },
+    {
+      "codigo": "visita",
+      "titulo": "Visita o diagnóstico",
+      "descripcion": "Ir a ver, diagnosticar y presupuestar",
+      "sinonimos": ["visita", "revisar", "diagnostico", "falla", "corto", "inspeccion"],
+      "lineas": [
+        { "item": "obra-general.visita", "cantidad": "una" }
+      ]
+    }
+  ]
+}

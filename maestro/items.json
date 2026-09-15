@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 1,
+  "descripcion": "Registro canónico de códigos de ítem. Los códigos son estables entre periodos: un presupuesto guardado los referencia.",
+  "descripcionPopularidad": "popularidad: entero >= 0, mayor = más común. Ordena el selector de ítems cuando el usuario todavía no tiene historial propio, y desempata. 0 = sin ranking.",
+  "unidades": [
+    "boca",
+    "metro",
+    "m2",
+    "unidad",
+    "hora",
+    "jornada",
+    "kva",
+    "global"
+  ],
+  "items": [
+    {
+      "codigo": "obra-general.visita",
+      "seccion": "obra-general",
+      "descripcion": "Visita: inspección ocular, evaluación, diagnóstico, asesoramiento y presupuesto",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 90,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "obra-general.urgencia-nocturna",
+      "seccion": "obra-general",
+      "descripcion": "Urgencia: lunes a sábado desde 20:00 hs / domingos y feriados (mínimo)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 42,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "obra-general.boca-completa",
+      "seccion": "obra-general",
+      "descripcion": "Boca completa (unidad básica de cotización de todo trabajo eléctrico)",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 92,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "obra-general.service-instalacion-minimo",
+      "seccion": "obra-general",
+      "descripcion": "Service / Instalación (mínimo)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 75,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "obra-general.hora-trabajo-minimo",
+      "seccion": "obra-general",
+      "descripcion": "Hora de trabajo (mínimo)",
+      "unidad": "hora",
+      "cotizable": true,
+      "popularidad": 48,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "obra-general.hora-trabajo-promedio",
+      "seccion": "obra-general",
+      "descripcion": "Hora de trabajo (promedio)",
+      "unidad": "hora",
+      "cotizable": true,
+      "popularidad": 78,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "canalizacion-losa.losa-cano-metalico",
+      "seccion": "canalizacion-losa",
+      "descripcion": "En losa con caño metálico",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "canalizacion-losa.loseta-cano-metalico",
+      "seccion": "canalizacion-losa",
+      "descripcion": "En loseta con caño metálico",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "amurado-mamposteria.ladrillo-comun-boca",
+      "seccion": "amurado-mamposteria",
+      "descripcion": "Ladrillo común",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 56,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "amurado-mamposteria.ladrillo-hueco-boca",
+      "seccion": "amurado-mamposteria",
+      "descripcion": "Ladrillo hueco",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 58,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "amurado-mamposteria.ladrillo-comun-metro",
+      "seccion": "amurado-mamposteria",
+      "descripcion": "Ladrillo común",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "amurado-mamposteria.ladrillo-hueco-metro",
+      "seccion": "amurado-mamposteria",
+      "descripcion": "Ladrillo hueco",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "amurado-vista.metal-pvc-cablecanal",
+      "seccion": "amurado-vista",
+      "descripcion": "Metal, PVC, cablecanal (14x30)",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 55,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "pase-viga-columna.pase",
+      "seccion": "pase-viga-columna",
+      "descripcion": "A razón de 1 (una) boca en viga y/o columna",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cable-subterraneo.tramo-tierra",
+      "seccion": "cable-subterraneo",
+      "descripcion": "Tramo en tierra (se cotiza 1 boca cada 1 m)",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cable-subterraneo.tramo-piso",
+      "seccion": "cable-subterraneo",
+      "descripcion": "Tramo en piso (se cotiza 1 boca cada 1 m)",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cable-subterraneo.caja-paso-tierra",
+      "seccion": "cable-subterraneo",
+      "descripcion": "Adicional por cada caja de paso — en tierra",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cable-subterraneo.caja-paso-piso",
+      "seccion": "cable-subterraneo",
+      "descripcion": "Adicional por cada caja de paso — en piso",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cableado.obra-nueva-canalizacion-propia",
+      "seccion": "cableado",
+      "descripcion": "Obra nueva – Opción 1: canalización realizada por el profesional",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 52,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cableado.obra-nueva-canalizacion-terceros",
+      "seccion": "cableado",
+      "descripcion": "Obra nueva – Opción 2: canalización realizada por otro profesional",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cableado.recableado-con-artefactos",
+      "seccion": "cableado",
+      "descripcion": "Recableado con artefactos",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 85,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "cableado.recableado-sin-artefactos",
+      "seccion": "cableado",
+      "descripcion": "Recableado sin artefactos",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 68,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "conexion-puntos-tomas.punto-toma-simple",
+      "seccion": "conexion-puntos-tomas",
+      "descripcion": "Punto, toma simple, portalámpara",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 100,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "conexion-puntos-tomas.toma-doble",
+      "seccion": "conexion-puntos-tomas",
+      "descripcion": "Toma doble",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 95,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "conexion-puntos-tomas.punto-combinacion",
+      "seccion": "conexion-puntos-tomas",
+      "descripcion": "Punto combinación",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 80,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.gabinete-1-medidor-mono",
+      "seccion": "acometida",
+      "descripcion": "Gabinete 1 medidor monofásico",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 35,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.gabinete-2-medidores-mono",
+      "seccion": "acometida",
+      "descripcion": "Gabinete 2 medidores monofásicos",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.gabinete-3-medidores-mono",
+      "seccion": "acometida",
+      "descripcion": "Gabinete 3 medidores monofásicos",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.gabinete-4-medidores-mono",
+      "seccion": "acometida",
+      "descripcion": "Gabinete 4 medidores monofásicos",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.pat-servicio",
+      "seccion": "acometida",
+      "descripcion": "PAT de servicio (jabalina + caja de inspección)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 38,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.pilar-completo",
+      "seccion": "acometida",
+      "descripcion": "Pilar completo (gabinete, TP, caño y PAT)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 36,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.cano-acometida",
+      "seccion": "acometida",
+      "descripcion": "Caño de acometida (amurado y conexión)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.caja-toma-nh00",
+      "seccion": "acometida",
+      "descripcion": "Caja de toma (fusilera NH 00)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "acometida.agregado-gabinete-medidor-tp",
+      "seccion": "acometida",
+      "descripcion": "Agregado de un gabinete de medidor + TP",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.hasta150-metro-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja hasta 150 mm — por metro lineal (H < 3 m)",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.hasta150-metro-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja hasta 150 mm — por metro lineal (H > 3 m)",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.hasta150-accesorio-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja hasta 150 mm — por accesorio (curva plana, unión T) (H < 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.hasta150-accesorio-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja hasta 150 mm — por accesorio (curva plana, unión T) (H > 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.hasta150-otros-accesorios-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja hasta 150 mm — otros accesorios (H < 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.hasta150-otros-accesorios-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja hasta 150 mm — otros accesorios (H > 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b200-300-metro-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 200/300 mm — por metro lineal (H < 3 m)",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b200-300-metro-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 200/300 mm — por metro lineal (H > 3 m)",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b200-300-accesorio-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 200/300 mm — por accesorio (curva plana, unión T) (H < 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b200-300-accesorio-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 200/300 mm — por accesorio (curva plana, unión T) (H > 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b200-300-otros-accesorios-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 200/300 mm — otros accesorios (H < 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b200-300-otros-accesorios-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 200/300 mm — otros accesorios (H > 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b450-600-metro-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 450/600 mm — por metro lineal (H < 3 m)",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b450-600-metro-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 450/600 mm — por metro lineal (H > 3 m)",
+      "unidad": "metro",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b450-600-accesorio-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 450/600 mm — por accesorio (curva plana, unión T) (H < 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b450-600-accesorio-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 450/600 mm — por accesorio (curva plana, unión T) (H > 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b450-600-otros-accesorios-h-menor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 450/600 mm — otros accesorios (H < 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "bandejas.b450-600-otros-accesorios-h-mayor3",
+      "seccion": "bandejas",
+      "descripcion": "Bandeja 450/600 mm — otros accesorios (H > 3 m)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "emergencia.atencion-inmediata-habil",
+      "seccion": "emergencia",
+      "descripcion": "Lunes a sábado de 8 a 20 hs — atención inmediata",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 40,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "correccion-fp.por-kva",
+      "seccion": "correccion-fp",
+      "descripcion": "Por cada kVA",
+      "unidad": "kva",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "grupos-electrogenos.hasta-3-5-kva",
+      "seccion": "grupos-electrogenos",
+      "descripcion": "Grupos hasta 3,5 kVA",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.tp-mono-id-tm-pat",
+      "seccion": "tableros",
+      "descripcion": "TP monofásico: tablero principal con 1 ID y 1 TM + PAT",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 72,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.tp-mono-solo-pat",
+      "seccion": "tableros",
+      "descripcion": "TP monofásico: solo PAT",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 26,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.tp-tri-id-tm-pat",
+      "seccion": "tableros",
+      "descripcion": "TP trifásico: tablero principal con 1 ID y 1 TM + PAT",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 30,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.modulo-bipolar-adicional",
+      "seccion": "tableros",
+      "descripcion": "ID, ITM u otro módulo bipolar adicional",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 70,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.id-tetrapolar",
+      "seccion": "tableros",
+      "descripcion": "ID tetrapolar",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.itm-tetrapolar",
+      "seccion": "tableros",
+      "descripcion": "ITM tetrapolar",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.itm-tripolar",
+      "seccion": "tableros",
+      "descripcion": "ITM tripolar",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.seccional-hasta-8-polos",
+      "seccion": "tableros",
+      "descripcion": "Tablero seccional hasta 8 polos",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 50,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.seccional-8-36-polos",
+      "seccion": "tableros",
+      "descripcion": "Tablero seccional de 8 a 36 polos",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.seccional-36-54-polos",
+      "seccion": "tableros",
+      "descripcion": "Tablero seccional de 36 a 54 polos",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "tableros.especiales",
+      "seccion": "tableros",
+      "descripcion": "Tableros especiales",
+      "unidad": "unidad",
+      "cotizable": false,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.aplique-simple",
+      "seccion": "artefactos",
+      "descripcion": "Artefacto aplique simple",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 60,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.spot-led",
+      "seccion": "artefactos",
+      "descripcion": "Spot LED por unidad",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 62,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.colgante-liviano-3-luces",
+      "seccion": "artefactos",
+      "descripcion": "Artefacto colgante liviano 3 luces 1 efecto",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 45,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.colgante-liviano-5-luces",
+      "seccion": "artefactos",
+      "descripcion": "Artefacto colgante liviano 5 luces 1 efecto",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.colgante-adicional-efecto",
+      "seccion": "artefactos",
+      "descripcion": "Artefacto colgante: adicional por efecto",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.colgante-pesado-minimo",
+      "seccion": "artefactos",
+      "descripcion": "Artefacto colgante pesado (mínimo)",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.tubo-led-simple-7-36w",
+      "seccion": "artefactos",
+      "descripcion": "Equipo de tubo LED simple de 7 W a 36 W",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 44,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.tubo-led-doble-7-36w",
+      "seccion": "artefactos",
+      "descripcion": "Equipo de tubo LED doble de 7 W a 36 W",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 28,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.tubo-led-45w",
+      "seccion": "artefactos",
+      "descripcion": "Equipo de tubo LED 45 W",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.tubo-led-doble-45w",
+      "seccion": "artefactos",
+      "descripcion": "Equipo de tubo LED doble 45 W",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.ventilador-techo",
+      "seccion": "artefactos",
+      "descripcion": "Ventilador de techo",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 65,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "artefactos.ventilador-techo-luminaria",
+      "seccion": "artefactos",
+      "descripcion": "Ventilador de techo con luminaria 1 efecto",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 63,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "automatismos.contactores",
+      "seccion": "automatismos",
+      "descripcion": "Contactores",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "automatismos.sensores",
+      "seccion": "automatismos",
+      "descripcion": "Sensores",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.proyecto-por-m2",
+      "seccion": "documentacion",
+      "descripcion": "Proyecto eléctrico por m² (incluye lista de materiales)",
+      "unidad": "m2",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.proyecto-minimo",
+      "seccion": "documentacion",
+      "descripcion": "Proyecto eléctrico — mínimo",
+      "unidad": "global",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.plano-por-m2",
+      "seccion": "documentacion",
+      "descripcion": "Plano eléctrico — por m²",
+      "unidad": "m2",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.plano-por-boca",
+      "seccion": "documentacion",
+      "descripcion": "Plano eléctrico — por boca",
+      "unidad": "boca",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.plano-tableros",
+      "seccion": "documentacion",
+      "descripcion": "Plano eléctrico — tableros",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.plano-acometida",
+      "seccion": "documentacion",
+      "descripcion": "Plano eléctrico — acometida",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.plano-minimo-30-bocas",
+      "seccion": "documentacion",
+      "descripcion": "Plano eléctrico — mínimo 30 bocas",
+      "unidad": "global",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "documentacion.lista-materiales-minimo-30m2",
+      "seccion": "documentacion",
+      "descripcion": "Lista de materiales — mínimo para 30 m²",
+      "unidad": "global",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "jornales.oficial-especializado",
+      "seccion": "jornales",
+      "descripcion": "Oficial especializado",
+      "unidad": "jornada",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "jornales.oficial-electricista",
+      "seccion": "jornales",
+      "descripcion": "Oficial electricista",
+      "unidad": "jornada",
+      "cotizable": true,
+      "popularidad": 25,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "jornales.medio-oficial",
+      "seccion": "jornales",
+      "descripcion": "Medio oficial electricista",
+      "unidad": "jornada",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "jornales.ayudante",
+      "seccion": "jornales",
+      "descripcion": "Ayudante",
+      "unidad": "jornada",
+      "cotizable": true,
+      "popularidad": 24,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.dci-caie-t1-res-com-mono",
+      "seccion": "certificados",
+      "descripcion": "DCI-CAIE T1 residencial / comercial monofásico",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 34,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.dci-caie-t1-res-tri",
+      "seccion": "certificados",
+      "descripcion": "DCI-CAIE T1 residencial trifásico",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.dci-caie-t1-com-tri",
+      "seccion": "certificados",
+      "descripcion": "DCI-CAIE T1 comercial trifásico",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.dci-caie-t2",
+      "seccion": "certificados",
+      "descripcion": "DCI-CAIE T2 según potencia instalada",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.dci-caie-t3",
+      "seccion": "certificados",
+      "descripcion": "DCI-CAIE T3 según potencia instalada",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.protocolo-pat-residencial-comercial",
+      "seccion": "certificados",
+      "descripcion": "Protocolo de puesta a tierra (SRT 900/15) residencial / comercial",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 32,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    },
+    {
+      "codigo": "certificados.protocolo-pat-industrial",
+      "seccion": "certificados",
+      "descripcion": "Protocolo de puesta a tierra (SRT 900/15) industrial",
+      "unidad": "unidad",
+      "cotizable": true,
+      "popularidad": 0,
+      "vigenteDesde": "2026-07",
+      "aliases": []
+    }
+  ]
+}

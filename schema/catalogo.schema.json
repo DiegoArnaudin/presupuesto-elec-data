@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://diegoarnaudin.github.io/presupuesto-elec-data/schema/catalogo.schema.json",
+  "title": "Catálogo AAIERIC de costos de mano de obra",
+  "type": "object",
+  "required": ["schemaVersion", "periodo", "etiqueta", "moneda", "fuente", "secciones"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "periodo": { "type": "string", "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$" },
+    "etiqueta": { "type": "string", "minLength": 3 },
+    "moneda": { "type": "string", "const": "ARS" },
+    "variacionPct": { "type": ["number", "null"] },
+    "fuente": {
+      "type": "object",
+      "required": ["url", "tipo", "obtenidoEl"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "tipo": { "type": "string", "enum": ["pdf", "html"] },
+        "titulo": { "type": "string" },
+        "obtenidoEl": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "sha256Pdf": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "notas": { "type": "array", "items": { "type": "string" } },
+    "revisiones": {
+      "description": "Ítems que el extractor marcó como dudosos. La app los muestra con una advertencia.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["codigo", "motivo"],
+        "additionalProperties": false,
+        "properties": {
+          "codigo": { "type": "string" },
+          "motivo": { "type": "string" }
+        }
+      }
+    },
+    "secciones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["codigo", "nombre", "orden", "items"],
+        "additionalProperties": false,
+        "properties": {
+          "codigo": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "nombre": { "type": "string", "minLength": 2 },
+          "orden": { "type": "integer", "minimum": 1 },
+          "nota": { "type": "string" },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["codigo", "descripcion", "unidad", "precio", "orden"],
+              "additionalProperties": false,
+              "properties": {
+                "codigo": { "type": "string", "pattern": "^[a-z0-9-]+\\.[a-z0-9-]+$" },
+                "descripcion": { "type": "string", "minLength": 2 },
+                "unidad": {
+                  "type": "string",
+                  "enum": ["boca", "metro", "m2", "unidad", "hora", "jornada", "kva", "global"]
+                },
+                "precio": { "type": "integer", "minimum": 0 },
+                "orden": { "type": "integer", "minimum": 1 },
+                "nota": { "type": "string" },
+                "cotizable": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
