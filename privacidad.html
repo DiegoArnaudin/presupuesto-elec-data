@@ -15,12 +15,13 @@
 </head>
 <body>
 <h1>Política de privacidad</h1>
-<p class="fecha">Presupuesto Eléctrico · vigente desde el 15 de septiembre de 2026</p>
+<p class="fecha">Presupuesto Eléctrico · vigente desde el 18 de septiembre de 2026</p>
 
 <p>Presupuesto Eléctrico es una app para que electricistas armen presupuestos
 con los costos sugeridos de mano de obra de AAIERIC. Está pensada para
-funcionar sin conexión y <strong>no recopila ni envía tus datos a ningún
-servidor</strong>.</p>
+funcionar sin conexión. Para usarla hace falta una cuenta gratuita: <strong>tu
+email es lo único que sale de tu teléfono</strong>. Tus presupuestos, clientes
+y datos de instalador no se envían a ningún servidor.</p>
 
 <h2>Qué datos guarda la app</h2>
 <ul>
@@ -30,13 +31,39 @@ servidor</strong>.</p>
   <li>Los presupuestos y los PDF que generás.</li>
 </ul>
 <p>Todo eso queda <strong>sólo en tu teléfono</strong>, en el almacenamiento
-privado de la app. No hay cuentas, ni sincronización en la nube, ni
-publicidad, ni herramientas de estadísticas o seguimiento.</p>
+privado de la app. No hay sincronización en la nube, ni publicidad, ni
+herramientas de estadísticas o seguimiento.</p>
+
+<h2>Tu cuenta</h2>
+<p>Para entrar a la app creás una cuenta con tu email y una contraseña, desde
+la app o desde
+<a href="cuenta/">diegoarnaudin.github.io/presupuesto-elec-data/cuenta</a>.
+La cuenta sirve para saber quién usa la app y, más adelante, para habilitar
+las funciones pagas; no se usa para publicidad ni se vende ni se comparte con
+nadie.</p>
+<ul>
+  <li><strong>Qué se guarda:</strong> tu email, la fecha en que creaste la
+      cuenta y la de tu último ingreso. La contraseña no la ve nadie: se
+      guarda cifrada por el servicio de cuentas.</li>
+  <li><strong>Dónde:</strong> en Firebase Authentication, un servicio de
+      Google que procesa esos datos por cuenta del desarrollador, en
+      servidores que pueden estar fuera de Argentina; ver la
+      <a href="https://firebase.google.com/support/privacy">información de
+      privacidad de Firebase</a>.</li>
+  <li><strong>Mails:</strong> sólo los necesarios para la cuenta (confirmar
+      el email, elegir una contraseña nueva) y, si alguna vez cambian las
+      condiciones de la app, un aviso con anticipación.</li>
+  <li><strong>En el teléfono:</strong> la app guarda la sesión en un archivo
+      privado, aparte de tus datos y fuera de las copias de seguridad, para
+      poder abrir sin conexión.</li>
+  <li><strong>Cuánto tiempo:</strong> hasta que elimines la cuenta.</li>
+</ul>
 
 <h2>Conexión a internet</h2>
-<p>La app se conecta a internet únicamente para descargar el catálogo público
-de precios desde GitHub Pages
-(<code>diegoarnaudin.github.io</code>). Esa descarga no incluye ningún dato
+<p>La app se conecta a internet para tu cuenta (entrar y confirmar de vez en
+cuando que sigue vigente, con Firebase) y para descargar el catálogo público
+de precios y la configuración de la app desde GitHub Pages
+(<code>diegoarnaudin.github.io</code>). Esas descargas no incluyen ningún dato
 tuyo ni de tus clientes. Como en cualquier sitio web, GitHub puede registrar
 la dirección IP de la conexión; ver la
 <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement">declaración
@@ -48,7 +75,7 @@ la aplicación que elijas. Eso ocurre sólo cuando lo pedís, y a partir de ahí
 el archivo queda sujeto a las políticas de esa aplicación.</p>
 
 <h2>Permisos</h2>
-<p>La app sólo pide acceso a internet, para descargar el catálogo. No usa
+<p>La app sólo pide acceso a internet, para la cuenta y el catálogo. No usa
 ubicación, cámara, contactos ni el almacenamiento compartido del teléfono.</p>
 
 <h2>Copias de seguridad</h2>
@@ -64,6 +91,11 @@ restaura sola si reinstalás la app o cambiás de teléfono. La manejás vos
 desde <em>Ajustes &#8594; Google &#8594; Copia de seguridad</em>.</p>
 
 <h2>Borrar tus datos</h2>
+<p><strong>Tu cuenta</strong> la eliminás desde la app (menú ⋮ → <em>Mi
+cuenta</em> → <em>Eliminar mi cuenta</em>) o desde
+<a href="cuenta/eliminar.html">esta página</a>; se borra en el momento, con
+tu email. Si no podés entrar, escribí al mail de contacto desde la dirección
+de la cuenta y la borramos a mano.</p>
 <p>Podés borrar presupuestos y clientes desde la app. Al desinstalarla, o al
 borrar sus datos desde los ajustes de Android, se elimina todo lo que guardó
 en el teléfono. Si tenías activada la copia de seguridad de Android, esa
@@ -79,8 +111,9 @@ de 13 años.</p>
 independiente: no está afiliada ni avalada por AAIERIC.</p>
 
 <h2>Cambios y contacto</h2>
-<p>Si esta política cambia, se actualiza esta página con la nueva fecha. Por
-consultas escribí a
+<p>Si esta política cambia, se actualiza esta página con la nueva fecha. Podés
+pedir acceso, corrección o eliminación de tus datos en cualquier momento
+(Ley 25.326 de Protección de Datos Personales). Por consultas escribí a
 <a href="mailto:diego.arnaudin.2@gmail.com">diego.arnaudin.2@gmail.com</a>.</p>
 </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "limitePresupuestosMes": 0,
+  "funciones": {
+    "duplicar": "gratis",
+    "revaluar": "gratis",
+    "ocultarAaieric": "gratis",
+    "guardarClientes": "gratis",
+    "sinMarcaPdf": "premium"
+  },
+  "fundadores": {
+    "registradosAntesDe": "",
+    "premiumHasta": ""
+  }
+}

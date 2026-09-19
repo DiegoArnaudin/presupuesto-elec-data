@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesto Eléctrico — Eliminar la cuenta</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         max-width: 30rem; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+         line-height: 1.55; color: #111827; background: #fff; }
+  h1 { color: #1E3A8A; font-size: 1.6rem; margin-bottom: .2rem; }
+  h2 { color: #1E3A8A; font-size: 1.1rem; margin-top: 1.6rem; }
+  .sub { color: #6B7280; margin-top: 0; }
+  label { display: block; margin-top: 1rem; font-size: .95rem; }
+  input[type=email], input[type=password] {
+          box-sizing: border-box; width: 100%; font: inherit; padding: .6rem .7rem;
+          border: 1px solid #D1D5DB; border-radius: .4rem; margin-top: .2rem; }
+  .confirmo { display: flex; gap: .5rem; align-items: flex-start; }
+  .confirmo input { margin-top: .35rem; }
+  button { width: 100%; margin-top: 1.4rem; padding: .75rem; font: inherit;
+           font-weight: 600; color: #fff; background: #B91C1C; border: 0;
+           border-radius: .4rem; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: default; }
+  .error { color: #B91C1C; margin-top: 1rem; min-height: 1.2rem; }
+  .ok { background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: .4rem;
+        padding: 1rem; margin-top: 1.2rem; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<h1>Eliminar tu cuenta</h1>
+<p class="sub">Presupuesto Eléctrico</p>
+
+<h2>Qué se borra</h2>
+<p>Tu cuenta: el email y la contraseña con que entrás a la app. Es lo único
+que la app guarda fuera de tu teléfono, y se borra en el momento.</p>
+
+<h2>Qué no se borra</h2>
+<p>Tus presupuestos, clientes y datos de “Mis datos” nunca salen de tu
+teléfono: siguen ahí hasta que desinstales la app o borres sus datos desde
+los ajustes de Android. Para volver a usar la app vas a tener que crear una
+cuenta nueva.</p>
+
+<p>También podés eliminar la cuenta desde la app: menú ⋮ → <em>Mi cuenta</em>
+→ <em>Eliminar mi cuenta</em>.</p>
+
+<form id="form" novalidate>
+  <label for="email">Email de la cuenta</label>
+  <input id="email" type="email" autocomplete="email" required>
+  <label for="clave">Contraseña</label>
+  <input id="clave" type="password" autocomplete="current-password" required>
+  <label class="confirmo"><input id="confirmo" type="checkbox">
+    <span>Entiendo que eliminar la cuenta no se puede deshacer.</span></label>
+  <button id="eliminar" type="submit">Eliminar mi cuenta</button>
+  <p id="error" class="error" role="alert"></p>
+</form>
+
+<div id="listo" class="ok" hidden>
+  <p><strong>Listo: tu cuenta se eliminó.</strong></p>
+</div>
+
+<h2>¿No podés entrar?</h2>
+<p>Si no te acordás la contraseña, pedí una nueva desde la app (“Olvidé mi
+contraseña”) o escribí a
+<a href="mailto:diego.arnaudin.2@gmail.com?subject=Eliminar%20mi%20cuenta">diego.arnaudin.2@gmail.com</a>
+desde el email de la cuenta, pidiendo que la eliminemos. Se borra dentro de
+los 7 días.</p>
+
+<p><a href="../privacidad.html">Política de privacidad</a></p>
+
+<script type="module">
+import { signInWithEmailAndPassword, deleteUser, signOut }
+  from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { auth, configurado, mensajeError } from "./firebase.js";
+
+const $ = (id) => document.getElementById(id);
+if (!configurado) {
+  $("error").textContent = "Por ahora pedí la baja por mail (más abajo).";
+  $("eliminar").disabled = true;
+}
+
+$("form").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  $("error").textContent = "";
+  if (!$("confirmo").checked) {
+    $("error").textContent = "Marcá que entendés que no se puede deshacer.";
+    return;
+  }
+  $("eliminar").disabled = true;
+  $("eliminar").textContent = "Eliminando…";
+  try {
+    // Borrar exige un ingreso reciente: se entra con la contraseña recién
+    // escrita y se borra enseguida.
+    const cred = await signInWithEmailAndPassword(
+      auth, $("email").value.trim().toLowerCase(), $("clave").value);
+    await deleteUser(cred.user);
+    $("form").hidden = true;
+    $("listo").hidden = false;
+  } catch (e) {
+    try { await signOut(auth); } catch (_) { /* nada que cerrar */ }
+    $("error").textContent = mensajeError(e);
+    $("eliminar").disabled = false;
+    $("eliminar").textContent = "Eliminar mi cuenta";
+  }
+});
+</script>
+</body>
+</html>

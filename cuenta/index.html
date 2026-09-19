@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesto Eléctrico — Crear cuenta</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         max-width: 30rem; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+         line-height: 1.55; color: #111827; background: #fff; }
+  h1 { color: #1E3A8A; font-size: 1.6rem; margin-bottom: .2rem; }
+  .sub { color: #6B7280; margin-top: 0; }
+  label { display: block; margin-top: 1rem; font-size: .95rem; }
+  input { box-sizing: border-box; width: 100%; font: inherit; padding: .6rem .7rem;
+          border: 1px solid #D1D5DB; border-radius: .4rem; margin-top: .2rem; }
+  button { width: 100%; margin-top: 1.4rem; padding: .75rem; font: inherit;
+           font-weight: 600; color: #fff; background: #1E3A8A; border: 0;
+           border-radius: .4rem; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: default; }
+  .error { color: #B91C1C; margin-top: 1rem; min-height: 1.2rem; }
+  .nota { color: #6B7280; font-size: .9rem; margin-top: 1.6rem; }
+  .ok { background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: .4rem;
+        padding: 1rem; margin-top: 1.2rem; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<h1>Crear tu cuenta</h1>
+<p class="sub">Presupuesto Eléctrico · presupuestos con los valores de AAIERIC</p>
+
+<form id="form" novalidate>
+  <p>Para usar la app necesitás una cuenta gratuita. Es la misma que podés
+  crear desde la app: con una alcanza.</p>
+  <label for="email">Email</label>
+  <input id="email" type="email" autocomplete="email" required>
+  <label for="clave">Contraseña</label>
+  <input id="clave" type="password" autocomplete="new-password" minlength="6" required>
+  <label for="clave2">Repetí la contraseña</label>
+  <input id="clave2" type="password" autocomplete="new-password" minlength="6" required>
+  <button id="crear" type="submit">Crear cuenta</button>
+  <p id="error" class="error" role="alert"></p>
+</form>
+
+<div id="listo" class="ok" hidden>
+  <p><strong>Listo: tu cuenta está creada.</strong> Te mandamos un mail para
+  confirmar el email.</p>
+  <p>Ahora bajá la app y entrá con <strong id="listo-email"></strong>:
+  <a id="play" href="#">Presupuesto Eléctrico en Google Play</a>.</p>
+</div>
+
+<p class="nota">Durante el lanzamiento todo es gratis y sin límites. Más
+adelante la versión gratis va a tener un límite de presupuestos por mes y
+algunas funciones van a ser Premium. Te avisamos con tiempo.</p>
+<p class="nota">La cuenta sólo guarda tu email; tus presupuestos y clientes
+quedan en tu teléfono. Al crear la cuenta aceptás la
+<a href="../privacidad.html">política de privacidad</a>.
+¿Querés borrar tu cuenta? <a href="eliminar.html">Eliminar la cuenta</a>.</p>
+
+<script type="module">
+import { createUserWithEmailAndPassword, sendEmailVerification, signOut }
+  from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { auth, configurado, mensajeError, URL_PLAY } from "./firebase.js";
+
+const $ = (id) => document.getElementById(id);
+$("play").href = URL_PLAY;
+if (!configurado) {
+  $("error").textContent = "Todavía no se pueden crear cuentas desde acá.";
+  $("crear").disabled = true;
+}
+
+$("form").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const email = $("email").value.trim().toLowerCase();
+  const clave = $("clave").value;
+  $("error").textContent = "";
+  if (!email) { $("error").textContent = "Escribí tu email."; return; }
+  if (clave.length < 6) {
+    $("error").textContent = "La contraseña tiene que tener al menos 6 caracteres.";
+    return;
+  }
+  if (clave !== $("clave2").value) {
+    $("error").textContent = "Las dos contraseñas no coinciden.";
+    return;
+  }
+
+  $("crear").disabled = true;
+  $("crear").textContent = "Creando…";
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, clave);
+    try {
+      await sendEmailVerification(cred.user);
+    } catch (e) {
+      // La cuenta ya existe: si el mail no sale, no se pierde el registro.
+    }
+    // La sesión es de la app, no del navegador.
+    await signOut(auth);
+    $("listo-email").textContent = email;
+    $("form").hidden = true;
+    $("listo").hidden = false;
+  } catch (e) {
+    $("error").textContent = mensajeError(e);
+    $("crear").disabled = false;
+    $("crear").textContent = "Crear cuenta";
+  }
+});
+</script>
+</body>
+</html>
